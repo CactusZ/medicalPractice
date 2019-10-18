@@ -81,3 +81,6 @@ jspm_packages/
 
 # Output of tsc
 dist
+
+# vscode config
+.vscode
