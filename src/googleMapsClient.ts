@@ -6,8 +6,8 @@ config();
 
 // Initialize the Google Maps Client
 const googleMapsClient: GoogleMapsClient = createClient({
+  Promise,
   key: process.env.GOOGLE_MAPS_API_KEY,
-  Promise: Promise
 });
 
 export default googleMapsClient;
