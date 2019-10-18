@@ -8,3 +8,7 @@ export default interface IDatastore {
   getPractices(): IPractice[];
   getStudents(): IStudent[];
 }
+
+export type ITypeMap<T> = {
+  [key in keyof T]: "string" | "array" | "boolean";
+}

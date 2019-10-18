@@ -1,24 +1,33 @@
 import IDatastore from "typings/IDatastore";
-import {IPractice} from "typings/IPractice";
-import {IStudent} from "typings/IStudent";
+import { IPractice } from "typings/IPractice";
+import { IStudent } from "typings/IStudent";
+import * as fs from "fs";
+import { parseEntries, studentTypeMap, practiceTypeMap } from "./utils/Parser";
 
-// TODO: Write tests and implement
 export default class Datastore implements IDatastore {
-  clear(): void {
+  private students: IStudent[];
+  private practices: IPractice[];
+
+  public clear(): void {
+    this.students = [];
+    this.practices = [];
   }
 
-  getPractices(): IPractice[] {
-    return [];
+  public getPractices(): IPractice[] {
+    return this.practices.slice();
   }
 
-  getStudents(): IStudent[] {
-    return [];
+  public getStudents(): IStudent[] {
+    return this.students.slice();
   }
 
-  readPracticesFromCSVFile(practicesCSVFilePath: string): void {
+  public readPracticesFromCSVFile(practicesCSVFilePath: string): void {
+    const data = fs.readFileSync(practicesCSVFilePath);
+    this.practices = parseEntries<IPractice>(String(data), practiceTypeMap);
   }
 
-  readStudentsFromCSVFile(studentsCSVFilePath: string): void {
+  public readStudentsFromCSVFile(studentsCSVFilePath: string): void {
+    const data = fs.readFileSync(studentsCSVFilePath);
+    this.students = parseEntries<IStudent>(String(data), studentTypeMap);
   }
-
 }
