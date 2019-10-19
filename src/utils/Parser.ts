@@ -44,6 +44,9 @@ export function parseEntry<T>(
         value = Boolean(+value);
       } else if (typeMap[key] === "array") {
         value = value.split(ARRAY_SPLITTER);
+        if (value.length === 1 && value[0] === "\"\"") {
+          value = [];
+        }
       }
       resultObject[key] = value;
       return resultObject;

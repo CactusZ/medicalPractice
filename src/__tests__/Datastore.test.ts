@@ -47,6 +47,21 @@ describe("Entry parsing", () => {
     });
   });
 
+  test("one practice with empty specialties parsing", () => {
+    const titleLine = `id	address	specialties`;
+    const practiceLine = `P001	Rhaban-Fröhlich-Straße 11, 60433 Frankfurt am Main	""`;
+    const student = parseEntry(
+      practiceLine,
+      titleLine.split("\t"),
+      practiceTypeMap
+    );
+    expect(student).toMatchObject<IPractice>({
+      address: "Rhaban-Fröhlich-Straße 11, 60433 Frankfurt am Main",
+      id: "P001",
+      specialties: []
+    });
+  });
+
   test("multiple student parsing", () => {
     const titleLine = `id	address	alternativeAddress1	alternativeAddress2	hasCar	hasChildren	favoriteSpecialties`;
     const studentLine = `S001	Am Waldacker 21c, 60388 Frankfurt am Main	Pforzheimer Straße 15, 60329 Frankfurt am Main	Im Wörth 8, 60433 Frankfurt am Main	0	0	Notfallmedizin, Kinder-Endokrinologie und -Diabetologie`;
