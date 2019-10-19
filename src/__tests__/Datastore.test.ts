@@ -1,6 +1,6 @@
-import { SPLITTER, LINE_SPLITTER, parseEntry, studentTypeMap, practiceTypeMap, parseEntries } from "../src/utils/Parser";
-import { IStudent } from "../src/typings/IStudent";
-import { IPractice } from "../src/typings/IPractice";
+import { SPLITTER, LINE_SPLITTER, parseEntry, studentTypeMap, practiceTypeMap, parseEntries } from "../utils/Parser";
+import { IStudent } from "../typings/IStudent";
+import { IPractice } from "../typings/IPractice";
 
 describe("Entry parsing", () => {
   test("one student parsing", () => {

@@ -1,4 +1,4 @@
-import db, { putValue, getValue } from "../src/db";
+import db, { putValue, getValue } from "../db";
 
 describe("db functionality", () => {
   test("db get/put functionality", async () => {
