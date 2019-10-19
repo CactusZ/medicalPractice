@@ -13,6 +13,7 @@ describe("db functionality", () => {
     const value = 42;
     await putValue(db, key, value);
     const valueFound = await getValue(db, key);
+    await delValue(db, key);
     expect(valueFound).toBe(value);
   });
 

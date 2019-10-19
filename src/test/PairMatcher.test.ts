@@ -8,7 +8,7 @@ import matchStudentsWithPractices, {
 import db from "../db";
 import googleClient from "../googleMapsClient";
 import { getGoogleDistanceMatrixMock } from "./utils";
-import { putValue } from "../utils/dbHelpers";
+import { putValue, delValue } from "../utils/dbHelpers";
 
 googleClient.distanceMatrix = getGoogleDistanceMatrixMock(() => {
   return Math.round(Math.random() * 10000);
@@ -144,5 +144,29 @@ describe("Pair Matcher", () => {
     expect(pairIds.sort()).toEqual(["S001 <-> P001", "S002 <-> P003", "S003 <-> P002"]);
     const secondStudentPair = pickedPairs.find((pair) => pair.student.id === "S002");
     expect(secondStudentPair.getStudentAddress()).toBe("Cesis"); // It should be alternative address
+    await delValue(db, getDbKey("Riga", "Ventspils", "bicycling"));
+    await delValue(db, getDbKey("Riga", "Ventspils", "driving"));
+    await delValue(db, getDbKey("Daugavpils", "Ventspils", "bicycling"));
+    await delValue(db, getDbKey("Daugavpils", "Ventspils", "driving"));
+    await delValue(db, getDbKey("Cesis", "Ventspils", "bicycling"));
+    await delValue(db, getDbKey("Cesis", "Ventspils", "driving"));
+    await delValue(db, getDbKey("Jurmala", "Ventspils", "bicycling"));
+    await delValue(db, getDbKey("Jurmala", "Ventspils", "driving"));
+    await delValue(db, getDbKey("Riga", "Liepaja", "bicycling"));
+    await delValue(db, getDbKey("Riga", "Liepaja", "driving"));
+    await delValue(db, getDbKey("Daugavpils", "Liepaja", "bicycling"));
+    await delValue(db, getDbKey("Daugavpils", "Liepaja", "driving"));
+    await delValue(db, getDbKey("Cesis", "Liepaja", "bicycling"));
+    await delValue(db, getDbKey("Cesis", "Liepaja", "driving"));
+    await delValue(db, getDbKey("Jurmala", "Liepaja", "bicycling"));
+    await delValue(db, getDbKey("Jurmala", "Liepaja", "driving"));
+    await delValue(db, getDbKey("Riga", "Sigulda", "bicycling"));
+    await delValue(db, getDbKey("Riga", "Sigulda", "driving"));
+    await delValue(db, getDbKey("Daugavpils", "Sigulda", "bicycling"));
+    await delValue(db, getDbKey("Daugavpils", "Sigulda", "driving"));
+    await delValue(db, getDbKey("Cesis", "Sigulda", "bicycling"));
+    await delValue(db, getDbKey("Cesis", "Sigulda", "driving"));
+    await delValue(db, getDbKey("Jurmala", "Sigulda", "bicycling"));
+    await delValue(db, getDbKey("Jurmala", "Sigulda", "driving"));
   });
 });
