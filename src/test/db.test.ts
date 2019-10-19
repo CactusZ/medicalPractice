@@ -1,4 +1,4 @@
-import { putValue, getValue } from "../utils/dbHelpers";
+import { putValue, getValue, delValue } from "../utils/dbHelpers";
 import db from "../db";
 
 describe("db functionality", () => {
@@ -21,7 +21,25 @@ describe("db functionality", () => {
     const val = await getValue(db, key);
     expect(val).toBeNull();
   });
-  afterAll(() => {
-    db.close();
+
+  test("remove value", async () => {
+    expect.assertions(2);
+    const key = JSON.stringify([
+      "test",
+      "destination1",
+      "destination2",
+      "bicycle"
+    ]);
+    const value = 42;
+    await putValue(db, key, value);
+    let valueFound = await getValue(db, key);
+    expect(valueFound).toBe(value);
+    await delValue(db, key);
+    valueFound = await getValue(db, key);
+    expect(valueFound).toBeNull();
+  });
+
+  afterAll(async () => {
+    await db.close();
   });
 });
