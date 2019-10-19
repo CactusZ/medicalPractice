@@ -105,7 +105,11 @@ describe("Pair Matcher", () => {
   });
 
   test("Pair sort Algorithm", async () => {
-    const getDbKey = (studentAddress: string,practiceAddress: string, mode: "driving" | "bicycling") => {
+    const getDbKey = (
+      studentAddress: string,
+      practiceAddress: string,
+      mode: "driving" | "bicycling"
+    ) => {
       return JSON.stringify([studentAddress, practiceAddress, mode]);
     };
     await putValue(db, getDbKey("Riga", "Ventspils", "bicycling"), 70);
@@ -141,8 +145,14 @@ describe("Pair Matcher", () => {
     );
     expect(pickedPairs).toHaveLength(3);
     const pairIds = pickedPairs.map(pair => pair.getPairId());
-    expect(pairIds.sort()).toEqual(["S001 <-> P001", "S002 <-> P003", "S003 <-> P002"]);
-    const secondStudentPair = pickedPairs.find((pair) => pair.student.id === "S002");
+    expect(pairIds.sort()).toEqual([
+      "S001 <-> P001",
+      "S002 <-> P003",
+      "S003 <-> P002"
+    ]);
+    const secondStudentPair = pickedPairs.find(
+      pair => pair.student.id === "S002"
+    );
     expect(secondStudentPair.getStudentAddress()).toBe("Cesis"); // It should be alternative address
     await delValue(db, getDbKey("Riga", "Ventspils", "bicycling"));
     await delValue(db, getDbKey("Riga", "Ventspils", "driving"));

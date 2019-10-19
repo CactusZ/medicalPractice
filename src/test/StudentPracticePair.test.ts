@@ -223,7 +223,6 @@ describe("Student Practice Pair", () => {
       } catch (e) {
         expect(e).toBeInstanceOf(Error);
       }
-
-    })
+    });
   });
 });
