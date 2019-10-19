@@ -11,4 +11,4 @@ export default interface IDatastore {
 
 export type ITypeMap<T> = {
   [key in keyof T]: "string" | "array" | "boolean";
-}
+};

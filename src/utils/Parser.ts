@@ -26,7 +26,9 @@ export function parseEntries<T>(data: string, typeMap: ITypeMap<T>): T[] {
   const lines = data.split(LINE_SPLITTER).filter(l => l.length); // filter empty lines if any
   const titleLine = lines[0];
   const titleLineParts = titleLine.split(SPLITTER);
-  return lines.slice(1).map(line => this.parseEntry(line, titleLineParts, typeMap));
+  return lines
+    .slice(1)
+    .map(line => this.parseEntry(line, titleLineParts, typeMap));
 }
 
 export function parseEntry<T>(
