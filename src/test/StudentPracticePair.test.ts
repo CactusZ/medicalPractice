@@ -79,9 +79,7 @@ describe("Student Practice Pair", () => {
       pair.travelDurationByBicyclingInSeconds = 60 * 30;
       pair.setAverageDistance(60 * 15);
       const score =
-        AVERAGE_DISTANCE_OFFSET * (60 * 15) +
-        MAX_DISTANCE_SCORE -
-        60 * 20;
+        AVERAGE_DISTANCE_OFFSET * (60 * 15) + MAX_DISTANCE_SCORE - 60 * 20;
       expect(pair.getPairWeight()).toBe(score);
     });
     test("No Children, Has match, Has Average", () => {
