@@ -33,6 +33,8 @@ export class StudentPracticePair implements IStudentPracticePair {
       this.student.alternativeAddress1,
       this.student.alternativeAddress2
     ];
+
+    // fetch durations from all student addresses to practice by bicycle
     const bicyclePromise: Promise<number[]> = Promise.all(
       addresses.map(address => {
         if (address) {
@@ -42,6 +44,8 @@ export class StudentPracticePair implements IStudentPracticePair {
         }
       })
     );
+
+    // fetch durations from all student addresses to practice by car (Infinity if has no car)
     let carPromise: Promise<number[]> = Promise.resolve([
       Infinity,
       Infinity,
@@ -65,17 +69,17 @@ export class StudentPracticePair implements IStudentPracticePair {
     const minBicycle = Math.min(...bicycleDurations);
     const minCar = Math.min(...carDurations);
     const min = Math.min(minBicycle, minCar);
-    if (min === bicycleDurations[0] || min === carDurations[0]) {
+    if (min === bicycleDurations[0] || min === carDurations[0]) { // main address
       this.travelDurationByCarInSeconds = carDurations[0];
       this.travelDurationByBicyclingInSeconds = bicycleDurations[0];
       this.isAlternativeAddress1 = false;
       this.isAlternativeAddress2 = false;
-    } else if (min === bicycleDurations[1] || min === carDurations[1]) {
+    } else if (min === bicycleDurations[1] || min === carDurations[1]) { // alternative address 1
       this.travelDurationByCarInSeconds = carDurations[1];
       this.travelDurationByBicyclingInSeconds = bicycleDurations[1];
       this.isAlternativeAddress1 = true;
       this.isAlternativeAddress2 = false;
-    } else if (min === bicycleDurations[2] || min === carDurations[2]) {
+    } else if (min === bicycleDurations[2] || min === carDurations[2]) { // alternative address 2
       this.travelDurationByCarInSeconds = carDurations[2];
       this.travelDurationByBicyclingInSeconds = bicycleDurations[2];
       this.isAlternativeAddress1 = false;
