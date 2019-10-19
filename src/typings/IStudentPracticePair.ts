@@ -1,7 +1,6 @@
 import { IPractice } from "typings/IPractice";
 import { IStudent } from "typings/IStudent";
 
-// This is only a hint. You can change this as you wish.
 export interface IStudentPracticePair {
   student: IStudent;
   practice: IPractice;
@@ -9,6 +8,7 @@ export interface IStudentPracticePair {
   isAlternativeAddress2: boolean; // Should be true, if this pair is using the students alternative address 2
   travelDurationByCarInSeconds: number;
   travelDurationByBicyclingInSeconds: number;
+  averageStudentDistanceTimeInSeconds: number;
   getPairId(): string;
   getPairWeight(): number;
   resetCachedTravelValues(): Promise<void>;
@@ -16,4 +16,10 @@ export interface IStudentPracticePair {
   getStudentAddress(): string;
   getFastestTransportMode(): string;
   getFastestTransportDuration(): number;
+  setAverageDistance(distance: number): void;
+  callApi(
+    studentAddress: string,
+    mode: "driving" | "bicycling"
+  ): Promise<number>;
+  getDbKey(studentAddress: string, mode: "driving" | "bicycling"): string;
 }
