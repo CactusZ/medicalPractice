@@ -1,0 +1,50 @@
+S034 <-> P013 | 1100262998472 | Am Klingelborn 43, 60437 Frankfurt am Main | Im Geeren 125, 60433 Frankfurt am Main | No | Yes | Bicycle | 25 | Palliativmedizin
+S033 <-> P020 | 1100192398413 | Autogenstraße 11, 65933 Frankfurt am Main | Cretzschmarstraße 18, 60487 Frankfurt am Main | No | Yes | Bicycle | 26 | Sexualmedizin
+S035 <-> P023 | 1100124699062 | Überlinger Weg 17, 60386 Frankfurt am Main | Ilbenstädter Straße 33, 60385 Frankfurt am Main | No | Yes | Car | 15 | Palliativmedizin
+S039 <-> P004 | 1100121898773 | Annabergstraße 54, 65931 Frankfurt am Main | Im Burgfeld 111, 60439 Frankfurt am Main | No | Yes | Car | 20 | Schlafmedizin
+S037 <-> P025 | 1100098898921 | Melibocusstraße 21, 60528 Frankfurt am Main | Scheerengasse 8, 60599 Frankfurt am Main | No | Yes | Car | 17 | Palliativmedizin
+S038 <-> P017 | 1000098899932 | Melibocusstraße 23, 60528 Frankfurt am Main | Breubergstraße 5, 60528 Frankfurt am Main | No | Yes | Bicycle | 1 | 
+S036 <-> P031 | 1000082599804 | Weberstraße 62, 60318 Frankfurt am Main | Baustraße 16, 60322 Frankfurt am Main | No | Yes | Bicycle | 3 | 
+S023 <-> P014 | 100235198843 | Ludwig-Quidde-Straße 2a, 60437 Frankfurt am Main | Hessestraße 34, 60439 Frankfurt am Main | No | No | Bicycle | 19 | Proktologie
+S021 <-> P009 | 100228497740 | An der Herrenwiese 92, 60529 Frankfurt am Main | Hegelstraße 20, 60316 Frankfurt am Main | No | No | Bicycle | 37 | Homöopathie
+S013 <-> P006 | 100167197984 | Ben-Gurion-Ring 105, 60437 Frankfurt am Main | Bleichstraße 12, 60313 Frankfurt am Main | Alternative 1 | No | Bicycle | 33 | Strahlentherapie
+S028 <-> P018 | 100159099562 | Am Ebelfeld 133, 60488 Frankfurt am Main | Gerhart-Hauptmann-Ring 358, 60439 Frankfurt am Main | No | No | Bicycle | 7 | Flugmedizin
+S002 <-> P021 | 100154199102 | Storchgasse 2, 65929 Frankfurt am Main | Hermann-Küster-Straße 30, 65931 Frankfurt am Main | No | No | Bicycle | 14 | Notfallmedizin
+S032 <-> P007 | 100140898659 | Goldpeppingstraße 28, 60435 Frankfurt am Main | Hanauer Landstraße 295, 60314 Frankfurt am Main | No | No | Bicycle | 22 | Naturheilverfahren
+S042 <-> P002 | 100133198012 | Marktstraße 111, 60388 Frankfurt am Main | Kurmainzer Straße 160, 65936 Frankfurt am Main | No | No | Car | 33 | Tropenmedizin
+S022 <-> P019 | 100131799142 | Lange Straße 31, 60311 Frankfurt am Main | Inheidener Straße 12, 60385 Frankfurt am Main | No | No | Bicycle | 14 | Notfallmedizin
+S012 <-> P012 | 100131598911 | Ulrichstraße 43, 60433 Frankfurt am Main | Kantstraße 13, 60316 Frankfurt am Main | No | No | Bicycle | 18 | Stimm- und Sprechstörungen
+S008 <-> P001 | 100128898468 | Märker Straße 24, 60437 Frankfurt am Main | Rhaban-Fröhlich-Straße 11, 60433 Frankfurt am Main | No | No | Bicycle | 25 | Notfallmedizin
+S047 <-> P008 | 100126599116 | Albert-Einstein-Straße 48, 60437 Frankfurt am Main | Margeritenweg 17, 60433 Frankfurt am Main | No | No | Car | 14 | Chirotherapie
+S006 <-> P003 | 100118299237 | An der Schwarzbachmühle 21, 60529 Frankfurt am Main | Blauenstraße 22, 60528 Frankfurt am Main | Alternative 1 | No | Bicycle | 12 | Notfallmedizin
+S009 <-> P024 | 100116299679 | Am Ruhestein 47, 60529 Frankfurt am Main | Am Wiesenhof 19, 60529 Frankfurt am Main | Alternative 2 | No | Bicycle | 5 | Ärztliches Qualitätsmanagement
+S048 <-> P016 | 100111599115 | Vatterstraße 61, 60386 Frankfurt am Main | Buchrainstraße 66, 60599 Frankfurt am Main | No | No | Car | 14 | Infektiologie
+S004 <-> P005 | 100108698627 | Rödelheimer Landstraße 99, 60489 Frankfurt am Main | Kurhessenstraße 6, 60431 Frankfurt am Main | No | No | Bicycle | 22 | Notfallmedizin
+S003 <-> P011 | 100101598540 | An der Lühe 4, 60488 Frankfurt am Main | Pissarroweg 7, 60438 Frankfurt am Main | Alternative 1 | No | Bicycle | 24 | Notfallmedizin
+S025 <-> P046 | 187799813 | Elsterstraße 77, 65933 Frankfurt am Main | Ernst-Wiss-Straße 18, 65933 Frankfurt am Main | No | No | Bicycle | 3 | 
+S024 <-> P029 | 173999500 | Battenberger Weg 15, 60489 Frankfurt am Main | Hohensteiner Straße 16, 60487 Frankfurt am Main | No | No | Bicycle | 8 | 
+S031 <-> P043 | 169499556 | Camillo-Sitte-Weg 19, 60488 Frankfurt am Main | Im Waldfeld 22, 60488 Frankfurt am Main | No | No | Bicycle | 7 | 
+S029 <-> P026 | 156799641 | Ziegelhüttenweg 66, 60598 Frankfurt am Main | Tucholskystraße 10, 60598 Frankfurt am Main | No | No | Bicycle | 5 | 
+S027 <-> P010 | 156299329 | Schmittener Straße 3, 60489 Frankfurt am Main | Hamburger Allee 44, 60486 Frankfurt am Main | No | No | Bicycle | 11 | 
+S026 <-> P034 | 153199895 | Birkholzweg 46, 60433 Frankfurt am Main | Alt-Eschersheim 78, 60433 Frankfurt am Main | No | No | Bicycle | 1 | 
+S020 <-> P027 | 144799711 | Franz-Henle-Straße 4, 65929 Frankfurt am Main | Ibellstraße 4, 65929 Frankfurt am Main | Alternative 1 | No | Bicycle | 4 | 
+S019 <-> P048 | 142399043 | Flußgasse 8, 60489 Frankfurt am Main | Oeserstraße 31a, 65934 Frankfurt am Main | Alternative 1 | No | Bicycle | 15 | 
+S016 <-> P049 | 140499926 | Bürgerstraße 45, 60437 Frankfurt am Main | Bürgerstraße 1, 60437 Frankfurt am Main | Alternative 1 | No | Bicycle | 1 | 
+S015 <-> P015 | 139199475 | Karlsbader Straße 1, 60598 Frankfurt am Main | Sachsenhäuser Landwehrweg 224, 60598 Frankfurt am Main | No | No | Bicycle | 8 | 
+S017 <-> P032 | 136299891 | Breubergstraße 20, 60528 Frankfurt am Main | Schwanheimer Straße 23, 60528 Frankfurt am Main | No | No | Bicycle | 1 | 
+S050 <-> P041 | 130499381 | Beunestraße 28, 65934 Frankfurt am Main | Hermann-Brill-Straße 18, 65931 Frankfurt am Main | No | No | Car | 10 | 
+S030 <-> P035 | 123599956 | Musikantenweg 36, 60316 Frankfurt am Main | Sandweg 37, 60316 Frankfurt am Main | No | No | Bicycle | 0 | 
+S014 <-> P045 | 120599560 | Danneckerstraße 39, 60594 Frankfurt am Main | Markt 4a, 60311 Frankfurt am Main | Alternative 1 | No | Bicycle | 7 | 
+S045 <-> P050 | 117699250 | Märker Straße 9, 60437 Frankfurt am Main | Ziegenhainer Straße 79, 60433 Frankfurt am Main | No | No | Car | 12 | 
+S011 <-> P033 | 114799911 | Eleonore-Sterling-Straße 64, 60433 Frankfurt am Main | Emsdorfer Straße 8, 60433 Frankfurt am Main | Alternative 1 | No | Bicycle | 1 | 
+S040 <-> P038 | 114298954 | Breitlacherstraße 65, 60489 Frankfurt am Main | Sonnenweg 63, 60529 Frankfurt am Main | No | No | Car | 17 | 
+S041 <-> P022 | 110999088 | Alt-Niederursel 57, 60439 Frankfurt am Main | Azaleenweg 50, 60433 Frankfurt am Main | No | No | Car | 15 | 
+S043 <-> P040 | 110599003 | Toni-Sender-Straße 15, 65936 Frankfurt am Main | Feuerbachstraße 10, 60325 Frankfurt am Main | No | No | Car | 16 | 
+S010 <-> P037 | 105099652 | Homburger Landstraße 129, 60435 Frankfurt am Main | Alkmenestraße 42, 60435 Frankfurt am Main | Alternative 1 | No | Bicycle | 5 | 
+S044 <-> P028 | 104899570 | Böcklinstraße 11, 60596 Frankfurt am Main | Elbestraße 9, 60329 Frankfurt am Main | No | No | Bicycle | 7 | 
+S018 <-> P044 | 101699632 | Friedberger Anlage 18b, 60316 Frankfurt am Main | Wittelsbacherallee 64, 60385 Frankfurt am Main | No | No | Bicycle | 6 | 
+S046 <-> P042 | 99999530 | Thielenstraße 19, 60433 Frankfurt am Main | Holunderweg 19, 60433 Frankfurt am Main | No | No | Car | 7 | 
+S005 <-> P039 | 95899103 | Raimundstraße 6, 60431 Frankfurt am Main | Friedberger Landstraße 198, 60389 Frankfurt am Main | Alternative 1 | No | Bicycle | 14 | 
+S001 <-> P047 | 93499255 | Am Waldacker 21c, 60388 Frankfurt am Main | Im Staffel 108, 60389 Frankfurt am Main | No | No | Bicycle | 12 | 
+S007 <-> P036 | 92099191 | Bernhard-Mannfeld-Weg 58, 60599 Frankfurt am Main | Sonnemannstraße 75, 60314 Frankfurt am Main | Alternative 1 | No | Bicycle | 13 | 
+S049 <-> P030 | 85499522 | Humboldtstraße 56, 60318 Frankfurt am Main | Heidestraße 122, 60385 Frankfurt am Main | No | No | Bicycle | 7 | 
