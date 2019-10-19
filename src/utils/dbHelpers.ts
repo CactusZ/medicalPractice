@@ -3,7 +3,7 @@ import { LevelDown } from "leveldown";
 import { AbstractIterator } from "abstract-leveldown";
 
 export async function putValue(db: Db, key: string, value: unknown) {
-    return db.put(key, JSON.stringify(value));
+  return db.put(key, JSON.stringify(value));
 }
 
 export async function getValue<T>(db: Db, key: string): Promise<T> {
