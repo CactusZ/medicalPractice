@@ -217,4 +217,34 @@ export class StudentPracticePair implements IStudentPracticePair {
 
     await Promise.all([bicyclePromise, carPromise]);
   }
+
+  public mapToCSVString() {
+    const parts: string[] = [];
+    parts.push(this.getPairId());
+    parts.push(this.getPairWeight().toString(10));
+    parts.push(this.getStudentAddress());
+    parts.push(this.practice.address);
+
+    let requiredToMove = "No";
+    if (this.isAlternativeAddress1) {
+      requiredToMove = "Alternative 1";
+    } else if (this.isAlternativeAddress2) {
+      requiredToMove = "Alternative 2";
+    }
+    parts.push(requiredToMove);
+    parts.push(this.student.hasChildren ? "Yes" : "No");
+    parts.push(this.getFastestTransportMode());
+    const durationInMinutes = Math.floor(
+      this.getFastestTransportDuration() / 60
+    );
+    parts.push(durationInMinutes.toString(10));
+    let matchingSpecialty = "";
+    if (this.hasMatchingSpecialties()) {
+      matchingSpecialty = this.student.favoriteSpecialties.find(specialty =>
+        this.practice.specialties.includes(specialty)
+      );
+    }
+    parts.push(matchingSpecialty);
+    return parts.join(" | ");
+  }
 }

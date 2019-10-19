@@ -22,4 +22,5 @@ export interface IStudentPracticePair {
     mode: "driving" | "bicycling"
   ): Promise<number>;
   getDbKey(studentAddress: string, mode: "driving" | "bicycling"): string;
+  mapToCSVString(): string;
 }
