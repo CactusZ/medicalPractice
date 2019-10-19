@@ -79,7 +79,7 @@ describe("Student Practice Pair", () => {
       pair.travelDurationByBicyclingInSeconds = 60 * 30;
       pair.setAverageDistance(60 * 15);
       const score =
-        AVERAGE_DISTANCE_OFFSET * (MAX_DISTANCE_SCORE - 60 * 15) +
+        AVERAGE_DISTANCE_OFFSET * (60 * 15) +
         MAX_DISTANCE_SCORE -
         60 * 20;
       expect(pair.getPairWeight()).toBe(score);
@@ -91,7 +91,7 @@ describe("Student Practice Pair", () => {
       pair.practice.specialties = ["Bc", "Ab"];
       pair.setAverageDistance(60 * 15);
       const score =
-        AVERAGE_DISTANCE_OFFSET * (MAX_DISTANCE_SCORE - 60 * 15) +
+        AVERAGE_DISTANCE_OFFSET * (60 * 15) +
         (MAX_DISTANCE_SCORE - 60 * 20) +
         MATCHING_SPECIALTY_SCORE;
       expect(pair.getPairWeight()).toBe(score);

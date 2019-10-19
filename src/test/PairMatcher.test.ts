@@ -146,8 +146,8 @@ describe("Pair Matcher", () => {
     expect(pickedPairs).toHaveLength(3);
     const pairIds = pickedPairs.map(pair => pair.getPairId());
     expect(pairIds.sort()).toEqual([
-      "S001 <-> P001",
-      "S002 <-> P003",
+      "S001 <-> P003",
+      "S002 <-> P001",
       "S003 <-> P002"
     ]);
     const secondStudentPair = pickedPairs.find(

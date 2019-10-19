@@ -167,8 +167,7 @@ export class StudentPracticePair implements IStudentPracticePair {
       score += MATCHING_SPECIALTY_SCORE;
     }
     if (this.averageStudentDistanceTimeInSeconds) {
-      const distanceScore =
-        MAX_DISTANCE_SCORE - this.averageStudentDistanceTimeInSeconds;
+      const distanceScore = this.averageStudentDistanceTimeInSeconds;
       score += distanceScore * AVERAGE_DISTANCE_OFFSET;
     }
     score += MAX_DISTANCE_SCORE - this.getFastestTransportDuration(); // let's assume there are no student with more than 24h travel time to any practice
