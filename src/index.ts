@@ -20,9 +20,9 @@ matchStudentsWithPractices(ds.getStudents(), ds.getPractices(), {
       throw new Error("error opening file: " + err);
     }
 
-    fs.write(fd, buffer, 0, buffer.length, null, err => {
-      if (err) {
-        throw new Error("error writing file: " + err);
+    fs.write(fd, buffer, 0, buffer.length, null, error => {
+      if (error) {
+        throw new Error("error writing file: " + error);
       }
       fs.close(fd, () => {
         // tslint:disable-next-line:no-console
