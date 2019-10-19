@@ -30,4 +30,7 @@ matchStudentsWithPractices(ds.getStudents(), ds.getPractices(), {
       });
     });
   });
+}).catch(e => {
+  // tslint:disable-next-line:no-console
+  console.log("Error " + e);
 });
