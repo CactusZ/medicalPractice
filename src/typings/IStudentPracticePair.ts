@@ -14,7 +14,7 @@ export interface IStudentPracticePair {
   resetCachedTravelValues(): Promise<void>;
   fetchTravelDurationsFromCacheOrAPI(): Promise<void>;
   getStudentAddress(): string;
-  getFastestTransportMode(): string;
+  getFastestTransportMode(): "Bicycle" | "Car";
   getFastestTransportDuration(): number;
   setAverageDistance(distance: number): void;
   callApi(

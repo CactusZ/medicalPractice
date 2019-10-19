@@ -146,7 +146,7 @@ export class StudentPracticePair implements IStudentPracticePair {
     );
   }
 
-  public getFastestTransportMode(): string {
+  public getFastestTransportMode() {
     return this.travelDurationByBicyclingInSeconds <
       this.travelDurationByCarInSeconds
       ? "Bicycle"

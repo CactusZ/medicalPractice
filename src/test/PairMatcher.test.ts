@@ -134,7 +134,10 @@ describe("Pair Matcher", () => {
     await putValue(db, getDbKey("Jurmala", "Sigulda", "driving"), 20);
     const pickedPairs: IStudentPracticePair[] = await matchStudentsWithPractices(
       students,
-      practices
+      practices,
+      {
+        takeAverageDistanceIntoAccount: true
+      }
     );
     expect(pickedPairs).toHaveLength(3);
     const pairIds = pickedPairs.map(pair => pair.getPairId());

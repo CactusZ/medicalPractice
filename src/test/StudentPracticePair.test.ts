@@ -52,11 +52,13 @@ describe("Student Practice Pair", () => {
       pair.travelDurationByCarInSeconds = 60 * 20;
       pair.travelDurationByBicyclingInSeconds = 60 * 30;
       expect(pair.getFastestTransportDuration()).toBe(60 * 20);
+      expect(pair.getFastestTransportMode()).toBe("Car");
     });
     test("By bicycle", () => {
       pair.travelDurationByCarInSeconds = 60 * 40;
       pair.travelDurationByBicyclingInSeconds = 60 * 30;
       expect(pair.getFastestTransportDuration()).toBe(60 * 30);
+      expect(pair.getFastestTransportMode()).toBe("Bicycle");
     });
     test("No car -> By bicycle", () => {
       pair.travelDurationByCarInSeconds = Infinity;
@@ -124,12 +126,12 @@ describe("Student Practice Pair", () => {
   });
 
   describe("Distance fetching", () => {
-    beforeEach(() => {
+    beforeEach(async () => {
+      await pair.resetCachedTravelValues();
       pair.student.hasCar = false;
       (googleClient.distanceMatrix as any).mockClear();
     });
     test("Cache empty, no car", async () => {
-      await pair.resetCachedTravelValues();
       expect.assertions(7);
       await pair.fetchTravelDurationsFromCacheOrAPI();
       expect(googleClient.distanceMatrix).toBeCalledTimes(3);
@@ -167,7 +169,6 @@ describe("Student Practice Pair", () => {
 
     test("Cache empty, has car", async () => {
       pair.student.hasCar = true;
-      await pair.resetCachedTravelValues();
       expect.assertions(7);
       await pair.fetchTravelDurationsFromCacheOrAPI();
       expect(googleClient.distanceMatrix).toBeCalledTimes(6);
@@ -205,12 +206,24 @@ describe("Student Practice Pair", () => {
 
     test("0 api calls with cache", async () => {
       pair.student.hasCar = true;
-      await pair.resetCachedTravelValues();
       expect.assertions(2);
       await pair.fetchTravelDurationsFromCacheOrAPI();
       expect(googleClient.distanceMatrix).toBeCalledTimes(6);
       await pair.fetchTravelDurationsFromCacheOrAPI();
       expect(googleClient.distanceMatrix).toBeCalledTimes(6);
     });
+
+    test("Throws error on non number value", async () => {
+      expect.assertions(1);
+      googleClient.distanceMatrix = getGoogleDistanceMatrixMock(() => {
+        return undefined;
+      });
+      try {
+        await pair.fetchTravelDurationsFromCacheOrAPI();
+      } catch (e) {
+        expect(e).toBeInstanceOf(Error);
+      }
+
+    })
   });
 });
