@@ -1,10 +1,8 @@
 # Coding and Problem Solving Exercise
-For R&D position candidates at Idana (Tomes GmbH, Freiburg im Breisgau)
-
 ### Description
 In this exercise you will design and implement an algorithm that assigns medical students to practices.
 
-**Time:** We've created an example solution ourselves that is *not in use yet*. Implementing the solution took Jerome about 10 hours. You might as well be faster or take more time for it. The time constraint is 48h from when you've received this exercise.
+**Time:** We've created an example solution ourselves that is *not in use yet*.
 
 **Relevance:** The existing algorithm for assigning medical students of the University of Freiburg might be improved using the input of your solution to this exercise. This means you are helping to solve a real-world problem by taking this exercise. This exercise shows that you understand:
 * How to fully read and understand an exercise task
